@@ -1,11 +1,11 @@
 <template>
-    <v-container fluid grid-list-xl>
+    <v-container fluid grid-list-xl >
         <v-layout row justify-space-between>
 
-            <v-flex xs12>
-                <v-card color="blue" class="white--text">
+            <v-flex xs12  my-0 py-0>
+                <v-card color="blue darken-3" class="white--text" >
                     <v-layout row>
-                        <v-flex xs10 pa-0 ma-0>
+                        <v-flex xs10 py-0 my-0>
                             <v-card-title primary-title>
                                 <div>
                                     <div class="headline">Device</div>
@@ -13,11 +13,14 @@
                                     
                                 </div>
                             </v-card-title>
-                        </v-flex>
-                        <v-flex xs2 align-center >
-                            <v-btn class="forget-btn">
+                        </v-flex >
+                        <v-flex xs2>
+                            <div class="icon">
+                                <v-icon large align-end color="white">phonelink</v-icon >
+                            </div>
+                            <!-- <menu-icon class="forget-btn white--text">
                                 forget
-                            </v-btn>
+                            </menu-icon> -->
                         </v-flex>
                     </v-layout>
                     <v-divider light></v-divider>
@@ -34,7 +37,7 @@
 </template>
 
 <script>
-
+// import MenuIcon from "vue-material-design-icons/menu.vue"
 
 export default {
   name: 'DeviceItem',
@@ -42,18 +45,21 @@ export default {
     
   },
   components: {
-    // CircleNav
+    // MenuIcon
   }
 }
 </script>
 
 <style scoped>
-.devise-card {
 
-    width:100%;
+.icon {
+    height: 100%;
+    text-align: e;
+    vertical-align: middle !important;
 }
 
-.forget-btn {
-    float: right;
+v-icon {
+    
 }
+
 </style>
