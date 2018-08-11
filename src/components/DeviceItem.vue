@@ -58,8 +58,5 @@ export default {
     vertical-align: middle !important;
 }
 
-v-icon {
-    
-}
 
 </style>
