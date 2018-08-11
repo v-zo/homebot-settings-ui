@@ -1,16 +1,18 @@
 <template>
-  <v-layout row wrap>
 
+  <v-layout row wrap>
+    
     <v-flex xs12>
       <v-list two-line>
         <template v-for="(item, index) in items">
-          <v-subheader v-if="item.header" :key="item.header">
+          
+          <v-subheader v-if="item.header" :key="item.header" >
             {{ item.header }}
           </v-subheader>
 
           <v-divider v-else-if="item.divider" :inset="item.inset" :key="index"></v-divider>
 
-          <v-list-tile v-else :key="item.title" avatar>
+          <v-list-tile v-else :key="item.title" ripple @click="click" avatar >
             <v-list-tile-avatar>
               <v-icon large align-end>{{item.icon}}</v-icon >
             </v-list-tile-avatar>
@@ -30,6 +32,7 @@
             </v-btn>
 
           </v-list-tile>
+          
         </template>
       </v-list>
       <div class="buttons-block">
@@ -39,6 +42,7 @@
     </v-flex>
 
   </v-layout>
+
 </template>
 
 <script>
@@ -75,6 +79,9 @@ export default {
   },
   components: {
     DeviceItem
+  },
+  methods: {
+    click(){}
   }
 }
 </script>
