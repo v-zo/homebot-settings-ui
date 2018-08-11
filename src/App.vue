@@ -8,7 +8,9 @@
     >
       <v-list dense>
         <template v-for="item in items">
+
           <v-layout
+            
             v-if="item.heading"
             :key="item.heading"
             row
@@ -52,7 +54,7 @@
               </v-list-tile-content>
             </v-list-tile>
           </v-list-group>
-          <v-list-tile v-else :key="item.text" @click="clickItem(item.route)">
+          <v-list-tile v-else :key="item.text" :to="item.route" @click="clickItem()">
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
@@ -62,6 +64,9 @@
               </v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
+
+        <!-- </router-link> -->
+
         </template>
       </v-list>
     </v-navigation-drawer>
@@ -182,6 +187,7 @@
 
 <script>
 import DeviceList from './components/DeviceList'
+import router from './router'
 
 export default {
   name: 'App',
@@ -229,7 +235,8 @@ export default {
     },
     methods: {
       clickItem(route){
-        this.$router.replace(route)
+        // this.$router.push(route)
+        // router.push(route)
       }
     }
 }
