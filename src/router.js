@@ -8,9 +8,14 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/', redirect: '/devices',
       name: 'devices',
       component: DeviceList
+    },
+    {
+    path: '/devices',
+    name: 'devices',
+    component: DeviceList
     },
     {
       path: '/settings',

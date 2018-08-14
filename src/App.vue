@@ -81,20 +81,7 @@
       </v-toolbar-title>
       
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>apps</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>notifications</v-icon>
-      </v-btn>
-      <v-btn icon large>
-        <v-avatar size="32px" tile>
-          <img
-            src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
-            alt="Vuetify"
-          >
-        </v-avatar>
-      </v-btn>
+
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
@@ -107,26 +94,13 @@
         </v-layout>
       </v-container>
     </v-content>
-    <!-- <v-btn
-      fab
-      bottom
-      right
-      color="pink"
-      dark
-      fixed
-      @click.stop="dialog = !dialog"
-    >
-      <v-icon>add</v-icon>
-    </v-btn>
-    <v-dialog v-model="dialog" width="800px">
-      
-    </v-dialog> -->
+
   </v-app>
 </template>
 
 <script>
 import DeviceList from './components/DeviceList'
-import router from './router'
+
 
 export default {
   name: 'App',
@@ -140,7 +114,7 @@ export default {
         {
           icon: 'phonelink',
           'icon-alt': 'phonelink',
-          text: 'Devices', route: '/'
+          text: 'Devices', route: '/devices'
           // model: true,
           // children: [
           //   { icon: 'add', text: 'Add device' }
@@ -173,9 +147,8 @@ export default {
       DeviceList
     },
     methods: {
-      clickItem(route){
-        // this.$router.push(route)
-        // router.push(route)
+      clickItem(){
+        
       }
     }
 }

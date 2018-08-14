@@ -4,7 +4,7 @@
         <v-card-title
           class="grey lighten-4 py-4 title"
         >
-          Settings
+          Settings placeholder
         </v-card-title>
         <v-container grid-list-sm class="pa-4">
           <v-layout row wrap>
