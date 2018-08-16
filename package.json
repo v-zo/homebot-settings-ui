@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "parcel public/index.html"
+    "start": "npx parcel index.html",
+    "dev": "vue-cli-service build --watch --mode development --dest builds/dev"
   },
   "dependencies": {
     "vue": "^2.5.17",
